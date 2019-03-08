@@ -190,5 +190,3 @@ for i in range(len(ans)):
     s.writerow(ans[i]) 
 text.close()
 
-
-print('end')
