@@ -4,15 +4,16 @@ import math
 import sys
 import matplotlib.pyplot as plt
 
-degree = 1
+degree = 2
 
 
 #data_type=['AMB_TEMP','CH4','CO','NMHC','NO','NO2','NOx','O3','PM10','PM2.5','RAINFALL','RH','SO2','THC','WD_HR','WIND_DIREC','WIND_SPEED','WS_HR']
 #data input test.csv result.csv train.csv
 test_name = sys.argv[1]
 result_name = sys.argv[2]
+x = []
 
-if(len(sys.argv)>2):
+if(len(sys.argv)>3):
     train_name = sys.argv[3]
     data = []
     # 每一個維度儲存一種污染物的資訊
@@ -62,70 +63,53 @@ if(len(sys.argv)>2):
                         x[i][j+k] = np.average( [ x[i-1][j:j+degree*9:degree] ] )
 
 
-#Normalization 可是效果不好
-'''
-mean = np.mean(x, axis = 0) 
-std = np.std(x, axis = 0)
-for i in range(x.shape[0]):
-    for j in range(x.shape[1]):
-        if not std[j] == 0 :
-            x[i][j] = (x[i][j]- mean[j]) / std[j]
-'''
-reverse_column = []
-for i in range(18):
-	reverse_column.append(i*9+8)
-	reverse_column.append(i*9+7)
-	reverse_column.append(i*9+6)
-	reverse_column.append(i*9+5)
-	reverse_column.append(i*9+4)
-#reverse_column = range(85,90)
+    #Normalization 可是效果不好
+    '''
+    mean = np.mean(x, axis = 0) 
+    std = np.std(x, axis = 0)
+    for i in range(x.shape[0]):
+        for j in range(x.shape[1]):
+            if not std[j] == 0 :
+                x[i][j] = (x[i][j]- mean[j]) / std[j]
+    '''
+    '''
+    reverse_column = []
+    for i in range(18):
+    	reverse_column.append(i*9+8)
+    	reverse_column.append(i*9+7)
+    	reverse_column.append(i*9+6)
+    	reverse_column.append(i*9+5)
+    	reverse_column.append(i*9+4)
+    reverse_column = range(81,90)
+    x = x[:,reverse_column]
+    '''
+    # add bias 在所有data前面加排1代表bias
 
-
-x = x[:,reverse_column]
-# add bias 在所有data前面加排1代表bias
-x = np.concatenate((np.ones((x.shape[0],1)),x), axis=1)
-
-if(len(sys.argv)>2):
+    
+    x = np.concatenate((np.ones((x.shape[0],1)),x), axis=1)
     w = np.zeros(len(x[0]))
     mt = np.zeros(len(x[0]))
     vt = np.zeros(len(x[0]))
-
-
-if(len(sys.argv)==2):
-    w = np.load('my_w.npy')
-    mt = np.load('my_mt.npy')
-    vt = np.load('my_vt.npy')
-
-
-#Adam 40萬 0.0001
-l_rate = 0.0001 
-repeat = 20000
-b1 = 0.9
-b2 = 0.999
-e = 1e-8
-x_t = x.transpose()
-lamda = [5,3,1,0.1,0.01,0.001,0.0001]
-color = ['red','green','blue','gray','peru','g','gold']
-for t in range(4):
-    loss_list = []
-
-    if(len(sys.argv)>2):
-        w = np.zeros(len(x[0]))
-        mt = np.zeros(len(x[0]))
-        vt = np.zeros(len(x[0]))
-    if(len(sys.argv)==2):
-        w = np.load('my_w.npy')
-        mt = np.load('my_mt.npy')
-        vt = np.load('my_vt.npy')
-
+   
+    
+    #Adam 40萬 0.0001
+    l_rate = 0.0001 
+    repeat = 400
+    b1 = 0.9
+    b2 = 0.999
+    e = 1e-8
+    x_t = x.transpose()
+    #lamda = [5,3,1,0.1,0.01,0.001,0.0001]
+    #color = ['red','green','blue','gray','peru','g','gold']
+    
+    
     for i in range(1,repeat):
         #calculate gradient
         diff = np.dot(x,w)
         loss = diff - y
         #regularization
-        loss += lamda[t] * np.sum((np.concatenate((np.array([0]),w[1:]),axis=0) **2 ))
-        gra = 2.0 * np.dot(x_t,loss) + 2*lamda[t]*(np.concatenate((np.array([0]),w[1:]),axis=0))
-
+        #loss += lamda[t] * np.sum((np.concatenate((np.array([0]),w[1:]),axis=0) **2 ))
+        gra = 2.0 * np.dot(x_t,loss) #+ 2*lamda[t]*(np.concatenate((np.array([0]),w[1:]),axis=0))
         #update weight
         mt = b1*mt + (1-b1)*gra
         vt = b2*vt + (1-b2)*(gra*gra)
@@ -136,14 +120,16 @@ for t in range(4):
         cost = np.sum(loss**2) / len(x)
         cost_a  = math.sqrt(cost)
         print ('iteration: %d | Cost: %.9f  ' % ( i,cost_a))
-        loss_list.append(cost_a)
-    plt.plot(loss_list,color=color[t])
-plt.show()
+   # np.save('my_w.npy',w)
+   # np.save('my_mt.npy',mt)
+   # np.save('my_vt.npy',vt)
 
-np.save('my_w.npy',w)
-np.save('my_mt.npy',mt)
-np.save('my_vt.npy',vt)
 
+
+if(len(sys.argv)==3):
+    w = np.load('my_w.npy')
+    mt = np.load('my_mt.npy')
+    vt = np.load('my_vt.npy')
 # read model
 #w = np.load('model.npy')
 #input test data
@@ -186,7 +172,7 @@ for i in range(test_x.shape[0]):
         if not std[j] == 0 :
             test_x[i][j] = (test_x[i][j]- mean[j]) / std[j]
 '''
-test_x = test_x[:,reverse_column]
+#test_x = test_x[:,reverse_column]
 # add bias
 test_x = np.concatenate((np.ones((test_x.shape[0],1)),test_x), axis=1)
 
