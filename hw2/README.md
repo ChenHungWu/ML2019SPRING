@@ -12,13 +12,13 @@ Usage of Scripts:
 
 (1) Run logistic/generative:
 
-`bash ./hw2_logistic.sh $1 $2 $3 $4 $5 $6 `
+    `bash ./hw2_logistic.sh $1 $2 $3 $4 $5 $6 `
 
-`bash ./hw2_generative.sh $1 $2 $3 $4 $5 $6 `
+    `bash ./hw2_generative.sh $1 $2 $3 $4 $5 $6 `
 
 (2) Run best model:
 
-` bash ./hw2_best.sh $1 $2 $3 $4 $5 $6 `
+    ` bash ./hw2_best.sh $1 $2 $3 $4 $5 $6 `
 
 In best model, I use sklearn.ensemble.GradientBoostingClassifier to practice
 Both scripts export only the prediction file. All the attribute are describe as follows:
