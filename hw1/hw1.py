@@ -94,7 +94,7 @@ if(len(sys.argv)>3):
     
     #Adam 40萬 0.0001
     l_rate = 0.0001 
-    repeat = 400
+    repeat = 400000
     b1 = 0.9
     b2 = 0.999
     e = 1e-8
