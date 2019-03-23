@@ -1,4 +1,4 @@
-# This is hw2 of Machine Learning (2017, Fall)
+# This is hw2 of Machine Learning (2019, Spring)
 
 Dataset and Task Introduction
 
