@@ -1,6 +1,5 @@
 # ML2019SPRING
-ML2017FALL
-Machine Learning (2017, Fall)
+Machine Learning (2019, Spring)
 
 HW1 - PM2.5 Prediction
 info : https://ntumlta.github.io/2017fall-ml-hw1/
