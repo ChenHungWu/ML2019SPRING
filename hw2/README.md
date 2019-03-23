@@ -19,7 +19,8 @@ Usage of Scripts:
 (2) Run best model:
 
 ``` bash ./hw2_best.sh $1 $2 $3 $4 $5 $6 ```
-in best model, i use sklearn.ensemble.GradientBoostingClassifier to practice
+
+In best model, I use sklearn.ensemble.GradientBoostingClassifier to practice
 Both scripts export only the prediction file. All the attribute are describe as follows:
 
 + $1: raw data (train.csv)  
