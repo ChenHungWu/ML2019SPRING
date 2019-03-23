@@ -19,6 +19,7 @@ If you meet the permission problem, you can use this command:
 chmod 777 xxx.sh
 ```
 or use
-
+```
 bash xxx.sh
+```
 to run the script.
