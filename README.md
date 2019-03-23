@@ -17,5 +17,4 @@
     - Kaggle : HW4沒有kaggle哦 ^^  
 
 
-For more details, please check this link:  
-http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html
+For more details, please check this [link](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html)
