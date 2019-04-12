@@ -1,0 +1,37 @@
+all data without normalize 
+all activated function are LeakyReLU
+all kernel_size=(3, 3)
+
+en01 = cnn09 public=0.70075 val_acc=0.6910
+seed=10  drop_rate=0.25 
+CNN 128+256+512+768
+Dense 512+512
+
+en02 = cnn11 public=0.70298 epoh=25 val_acc=0.6980
+CNN 64 kernel_size=(5, 5)+128 kernel_size=(3, 3)+512 kernel_size=(3, 3)+512 kernel_size=(3, 3)
+Dense 512+512
+
+en03 = cnn12 public=0.71022 val_acc=0.7
+seed=10  drop_rate=0.25 
+CNN 256+256+768+768
+Dense 512+512
+
+en04 = cnn13 epoh=20 public=0.70799 val_acc=0.69767
+seed=10  drop_rate=0.25 
+CNN 256+256+768+768
+Dense 768+768
+
+en05 = cnn15 epoh=20 public=0.71134  val_acc=0.70100
+seed=10  drop_rate=0.25 
+CNN 512+512+768+768
+Dense 256+256
+
+en06 = cnn17 public=0.71774 val_acc=0.98610  沒有切valid 全部一起train
+seed=10  drop_rate=0.15 
+CNN 512+512+768+768
+Dense 512+512
+
+en07 = cnn18 public=0.71719  val_acc=   沒有切valid 全部一起train
+seed=10  drop_rate=0.25
+CNN 256+256+768+768
+Dense 512+512
