@@ -40,6 +40,7 @@ save_model_name = sys.argv[2]
 def from_dataset():
     #load in by genfromtxt
     dataset = np.genfromtxt(fname=X_train_address, dtype='str', delimiter=' ', skip_header=1)
+    num_data = len(dataset)
     dataset = dataset.T
     #fix data into Y_train & X_train
     fixdata = dataset[0]
@@ -49,7 +50,7 @@ def from_dataset():
         Y_train[n], fix[n] = fixdata[n].split(',')[0], fixdata[n].split(',')[1]
     dataset[0] = fix
     
-    X_train = np.reshape(dataset.T,(28709,pic_size,pic_size,1)).astype('float64')
+    X_train = np.reshape(dataset.T,(num_data,pic_size,pic_size,1)).astype('float64')
     X_train /= 255
     np.save('Y_train_label.npy',Y_train)
 
