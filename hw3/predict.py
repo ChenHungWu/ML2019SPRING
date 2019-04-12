@@ -1,6 +1,5 @@
 import sys
 import numpy as np
-import keras.models
 from keras.models import load_model
 pic_size = 48
 
@@ -10,6 +9,7 @@ ad_export = sys.argv[2]
 def from_dataset():
 	#load in by genfromtxt
 	dataset = np.genfromtxt(fname=ad_testset, dtype='str', delimiter=' ', skip_header=1)
+	num_data = len(dataset)
 	dataset = dataset.T
 	
 	#fix data into label & feature
@@ -19,8 +19,7 @@ def from_dataset():
 	for n in range(len(fixdata)):
 		label[n], fix[n] = fixdata[n].split(',')[0], fixdata[n].split(',')[1]
 	dataset[0] = fix
-
-	feature = np.reshape(dataset.T,(7178,pic_size,pic_size,1)).astype('float64')
+	feature = np.reshape(dataset.T,(num_data ,pic_size,pic_size,1)).astype('float64')
 	feature /= 255
 	'''
 	mean_std = np.load('mean_std.npy').astype('float64')
@@ -70,7 +69,7 @@ testlabel07 = model07.predict(testfeature)
 
 testlabel_total =  (testlabel01 + testlabel02 + testlabel03 + testlabel04 + testlabel05)/5
 testlabel_total += testlabel06 + testlabel07
-testlabel_total = testlabel00
+#testlabel_total = testlabel00
 save = open(ad_export,'w')
 save.write("id,label\n")
 for i in range(len(testlabel_total)):
