@@ -49,11 +49,11 @@ model_name = 'en05.h5'
 model = load_model(model_name)
 
 # loading data for explanation
-#X_train, Y_train_label = from_dataset()
-X_train = np.load('X_train.npy')
-Y_train_label = np.load('Y_train_label.npy')
+X_train, Y_train_label = from_dataset()
+#X_train = np.load('X_train.npy')
+#Y_train_label = np.load('Y_train_label.npy')
 #predict = model.predict(X_train)
-predict = np.load('predict.npy')
+
 class_num = 7
 classes = ["Angry","Disgust","Fear","Happy","Sad","Surprise","Neutral"] #list of class
 
@@ -61,7 +61,9 @@ pic_list = []#the pic_num to be show
 for c in range(class_num):
 	pic_list.append([])
 	for i in range(len(Y_train_label)):
-		if(Y_train_label[i]==c and np.argmax(predict[i])==c): 
+		if(Y_train_label[i]==c 
+			#and np.argmax(predict[i])==c
+			): 
 			pic_list[c].append(i)
 
 for i in range(class_num):#find one pic_num of each class

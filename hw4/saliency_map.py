@@ -30,8 +30,8 @@ def from_dataset():
 	#Y_train = np_utils.to_categorical(Y_train, 7)
 	return X_train, Y_train_label
 
-#X_train, Y_train_label = from_dataset()
-X_train , Y_train_label= np.load('X_train.npy') ,np.load('Y_train_label.npy') #before One-hot encoding
+X_train, Y_train_label = from_dataset()
+#X_train , Y_train_label= np.load('X_train.npy') ,np.load('Y_train_label.npy') #before One-hot encoding
 class_num = 7
 classes = ["Angry","Disgust","Fear","Happy","Sad","Surprise","Neutral"] #list of class
 
