@@ -60,4 +60,4 @@ for cnt, c in enumerate(name_ls):
         ax[i//8,i%8].set_xticks([])
         ax[i//8,i%8].set_yticks([])
         ax[i//8,i%8].set_title('filter '+str(i)) 
-    fig.savefig(output_path+str(cnt)+'fig2_2.jpg')
+    fig.savefig(output_path+'fig2_2.jpg')
