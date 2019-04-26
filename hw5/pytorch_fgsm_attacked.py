@@ -8,8 +8,8 @@ from torchvision.models import resnet50, resnet101, vgg16, vgg19, densenet121, d
 #tar -zcvf ../images.tgz *.png
 start = 0
 pic_num = 200
-img_address = sys.argv[1] + '/'
-save_address = sys.argv[2] + '/'
+img_address = sys.argv[1]
+save_address = sys.argv[2]
 
 model_number = 0
 #[0:resnet50 1:resnet101 2:vgg16 3:vgg19 4:densenet121 5:densenet169]
@@ -45,7 +45,7 @@ loss_func = nn.CrossEntropyLoss()
 epsilon = 0.5/(255*0.224) #because normalized
 count = 0 
 for i in range(start, start+pic_num):
-    img = Image.open(img_address+'{:0>3d}.png'.format(i))#input
+    img = Image.open(img_address+'/{:0>3d}.png'.format(i))#input
     img = data_transform(img).reshape((1, 3, 224, 224))
 
     # Send the data and label to the device
@@ -98,10 +98,11 @@ for i in range(start, start+pic_num):
     # Re-classify the perturbed image
     pred = model(attacked_image)
     '''
-    b_array = before_pred.cpu().detach().numpy()
-    a_array = pred.cpu().detach().numpy()
-    np.save('b_array.npy', b_array)
-    np.save('a_array.npy', a_array)
+    if(i==0):
+        b_array = before_pred.cpu().detach().numpy()
+        a_array = pred.cpu().detach().numpy()
+        np.save('b_array.npy', b_array)
+        np.save('a_array.npy', a_array)
     '''
     after_label = pred.max(1, keepdim=True)[1] # get the index of the max log-probability
 
@@ -116,5 +117,5 @@ for i in range(start, start+pic_num):
     attacked_image = data_untransform(attacked_image.cpu().reshape((3, 224, 224)))
     attacked_image = torch.clamp(attacked_image, 0, 1)
     attacked_image = transforms.ToPILImage()(attacked_image)
-    attacked_image.save(save_address+'{:0>3d}.png'.format(i))
+    attacked_image.save(save_address+'/{:0>3d}.png'.format(i))
 print("Attack rate: ",count/pic_num)
