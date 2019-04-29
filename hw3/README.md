@@ -28,4 +28,4 @@ Usage of Scripts:
     $1 : test.csv
     $2 : predict file (output file)
 
-Thid script will download seven models to ensemble prediction.
+This script will download seven models to ensemble prediction.
