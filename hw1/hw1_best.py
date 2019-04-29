@@ -2,7 +2,6 @@ import csv
 import numpy as np
 import math
 import sys
-import matplotlib.pyplot as plt
 
 degree = 2
 
@@ -16,16 +15,16 @@ x = []
 if(len(sys.argv)>3):
     train_name = sys.argv[3]
     data = []
-    # 每一個維度儲存一種污染物的資訊
+    # each dim with one feature
     for i in range(18):
         data.append([])
     n_row = 0
     text = open(train_name, 'r', encoding='big5') 
     row = csv.reader(text , delimiter=",")    
     for r in row:
-        # 第0列沒有資訊
+        # no data in first row
         if n_row != 0:
-            # 每一列只有第3-27格有值(1天內24小時的數值)
+            # data in raw of column 3~27
             for i in range(3,27):
                 if r[i] != "NR":
                     data[(n_row-1)%18].append(float(r[i]))
