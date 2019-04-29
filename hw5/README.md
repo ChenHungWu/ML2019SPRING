@@ -1,6 +1,5 @@
 # This is hw5  of Machine Learning - Adversarial Attack
 
-Dataset and Task Introduction
 
 Task: untarget FGSM attack images to mislead trained model
 
