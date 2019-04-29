@@ -5,9 +5,7 @@ Dataset and Task Introduction
 Task: untarget FGSM attack images to mislead trained model
 
 Dataset: 200 RGB images with size 224*224
-
-**only when you meet the model in black block, you can attack it easily ~**
-
+#### only when you meet the model in black block, you can attack it easily ~
 
 **notice that same model in keras and pytorch have different weight !!**
 </br></br>
