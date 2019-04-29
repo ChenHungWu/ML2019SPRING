@@ -6,13 +6,12 @@ Task: Binary Classification Determine whether a person makes over 50K a year.
 
 Dataset: ADULT Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AGE>16) && (AGI>100) && (AFNLWGT>1) && (HRSWK>0)).
 
+Reference: https://archive.ics.uci.edu/ml/datasets/Adult
+
 Three methods:
 1. logistic mode
 2. generative model
-3. best model
-    In best model, I use sklearn.ensemble.GradientBoostingClassifier to training.
-
-Reference: https://archive.ics.uci.edu/ml/datasets/Adult
+3. best model (use sklearn.ensemble.GradientBoostingClassifier to training)
 
 Usage of Scripts:
 
