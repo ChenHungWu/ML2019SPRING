@@ -1,35 +1,27 @@
-# This is hw2 of Machine Learning (2019, Spring)
+# This is hw3 of Machine Learning - Image Sentiment Classification
 
-Dataset and Task Introduction
+Task: Classify images to one of seven sentiment
 
-Task: Binary Classification Determine whether a person makes over 50K a year.
+Dataset: 28709 processed gray scale images with size 224*224
 
-Dataset: ADULT Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AGE>16) && (AGI>100) && (AFNLWGT>1) && (HRSWK>0)).
+cnn.py:use 15,033,863 params
+dnn.py:for report only, the prediction rate is so....terrible.
+confusion_matrix.py:modify line 7 8 9 to get confusion matrix, be sure to use **Y_train_valid_label** rather than **Y_train_valid**
 
-Reference: https://archive.ics.uci.edu/ml/datasets/Adult
-
-Three methods:
-1. logistic mode
-2. generative model
-3. best model (use sklearn.ensemble.GradientBoostingClassifier to training)
 
 Usage of Scripts:
 
-(1) Run logistic/generative:
+(1) Run hw3_train.sh:
 
-    bash ./hw2_logistic.sh $1 $2 $3 $4 $5 $6 
+    bash ./hw3_train.sh $1
+    
+    $1 : train.csv
 
-    bash ./hw2_generative.sh $1 $2 $3 $4 $5 $6 
+(2) Run hw3_test.sh:
 
-(2) Run best model:
+    bash ./hw3_test.sh $1 $2
+    
+    $1 : test.csv
+    $2 : predict file (output file)
 
-    bash ./hw2_best.sh $1 $2 $3 $4 $5 $6 
-
-Both scripts export only the prediction file. All the attribute are describe as follows:
-
-+ $1: raw data (train.csv)  
-+ $2: test data (test.csv)  
-+ $3: provided train feature (X_train)  
-+ $4: provided train label (Y_train)
-+ $5: provided test feature (X_test)     
-+ $6: prediction.csv
+Thid script will download seven models to ensemble prediction.
