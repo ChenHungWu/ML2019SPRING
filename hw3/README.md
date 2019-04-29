@@ -5,7 +5,9 @@ Task: Classify images to one of seven sentiment
 Dataset: 28709 processed gray scale images with size 224*224
 
 cnn.py:use 15,033,863 params
+
 dnn.py:for report only, the prediction rate is so....terrible.
+
 confusion_matrix.py:modify line 7 8 9 to get confusion matrix, be sure to use **Y_train_valid_label** rather than **Y_train_valid**
 
 
