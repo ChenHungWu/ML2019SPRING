@@ -2,7 +2,7 @@
 
 Task: Classify images to one of seven sentiment
 
-Dataset: 28709 processed gray scale images with size 224*224
+Dataset: 28709 processed gray scale images with size 48*48
 <br /><br />
 
 cnn.py :use 15,033,863 params
