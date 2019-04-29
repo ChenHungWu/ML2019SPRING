@@ -1,4 +1,4 @@
-# This is hw2 of Machine Learning (2019, Spring)
+# This is hw2 of Machine Learning - Winner or Loser
 
 Dataset and Task Introduction
 
