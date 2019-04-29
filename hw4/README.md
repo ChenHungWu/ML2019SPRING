@@ -13,7 +13,7 @@ Four methods:
 
 Usage of Scripts:
 
-(1) Run logistic/generative:
+(1) Run hw4.sh:
 
     bash ./hw4_sh $1 $2 
     
