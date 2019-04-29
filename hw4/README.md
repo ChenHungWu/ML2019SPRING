@@ -15,7 +15,7 @@ Usage of Scripts:
 
 (1) Run hw4.sh:
 
-    bash ./hw4_sh $1 $2 
+    bash ./hw4.sh $1 $2 
     
     $1 train.csv
     $2 output file
