@@ -7,7 +7,7 @@ Dataset: Your trained model.
 
 Four methods:
 1. saliency_map
-2. limr
+2. lime
 3. visualize_by_noise
 4. visualize_by_picture
 
@@ -21,4 +21,4 @@ Usage of Scripts:
     $2 output file
 
 
-This script will download one model to visualize.
+This script will download one trained model to visualize.
