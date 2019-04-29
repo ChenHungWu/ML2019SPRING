@@ -1,5 +1,6 @@
 # This is hw1 of Machine Learning , NTU, Prof.LHY
 ### use 18 features in 9 hours to predict PM2.5 in the next hour 
+#### dim(x) = 18*9 dim(y)=1 y is one of 18 feature  
 
 There are two version of this homework:
 
