@@ -4,7 +4,7 @@ There are two version of this homework:
 
 hw1.py equals to hw1_best.py
 
-They can directly use the trained model in my_w.npy my_mt.npy and my_vt.npy 
+They can directly use the trained model in w_mt_vt.npy 
 
 To use those script, you need to insert two address:
 ```
