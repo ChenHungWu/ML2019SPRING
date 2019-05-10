@@ -2,9 +2,10 @@
 
 Dataset and Task Introduction
 
+* Ranked 38 place in class
+
 Task: Binary Classification Determine whether people can makes over 50K a year.
 
-* Ranked 38 place in class
 
 Dataset: ADULT Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AGE>16) && (AGI>100) && (AFNLWGT>1) && (HRSWK>0)).
 
