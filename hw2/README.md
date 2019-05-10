@@ -1,8 +1,9 @@
 # This is hw2 of Machine Learning - Winner or Loser
 
-Dataset and Task Introduction
-
+* It is a two class problem
 * Ranked 38 place in class
+
+Dataset and Task Introduction
 
 Task: Binary Classification Determine whether people can makes over 50K US in a year.
 
