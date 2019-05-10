@@ -8,8 +8,8 @@ wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_00.
 wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_00.weight
 wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_01.json
 wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_01.weight
-wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_04.json
-wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_04.weight
+wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_02.json
+wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_02.weight
 wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_07.json
 wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw6/rnn250_07.weight
 python3 test_model.py $1 $2 $3
