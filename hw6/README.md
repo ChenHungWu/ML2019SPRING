@@ -6,8 +6,11 @@ Task: use word embedding and RNN to identify whether the message in DCARD is mal
 Dataset: 120K message in DCARD
 
 train_model.py :  use word embedding and RNN
+
 test_model.py : ensemble four models
+
 bow_dnn.py : for report, use bag of word and DNN to train the model
+
 prediction.py : prdiction your model 
     
 Usage of Scripts:
