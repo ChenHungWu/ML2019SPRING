@@ -24,7 +24,7 @@ Usage of Scripts:
 
     bash ./hw6_train.sh $1 $2 $3 $4
     
-  $1 train_x.csv dir
-  $2 train_y.csv dir
-  $3 test_x.csv dir
-  $4 dict.txt.big dir
+    $1 train_x.csv dir
+    $2 train_y.csv dir
+    $3 test_x.csv dir
+    $4 dict.txt.big dir
