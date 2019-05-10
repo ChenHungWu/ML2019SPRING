@@ -1,5 +1,8 @@
 # This is hw3 of Machine Learning - Image Sentiment Classification
 
+* It is a multi-class problem
+* Ranked 2 place in class
+
 Task: Classify images to one of seven sentiment
 
 Dataset: 28709 processed gray scale images with size 48*48
