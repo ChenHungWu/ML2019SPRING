@@ -1,4 +1,4 @@
-# This is hw4 of Machine Learning - Explain your model
+# HW4 of Machine Learning - Explain your model
 
 Task: Use different method to visualize your model.
 
