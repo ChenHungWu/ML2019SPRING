@@ -1,4 +1,4 @@
-# This is hw1 of Machine Learning - PM2.5 Prediction
+# HW1 of Machine Learning - PM2.5 Prediction
 * It is a regression problem
 * 18 air features in 9 hours to predict PM2.5 in the next hour 
 * dim(x) = 18*9 dim(y)=1 y is one of 18 feature  
