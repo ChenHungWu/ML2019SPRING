@@ -1,4 +1,4 @@
-# This is hw3 of Machine Learning - Image Sentiment Classification
+# HW3 of Machine Learning - Image Sentiment Classification
 
 * It is a multi-class problem
 * Ranked 2 place in class
