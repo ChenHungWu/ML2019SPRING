@@ -1,11 +1,11 @@
 # HW6 of Machine Learning - Malicious Comments Identification
 * Ranked 20 place in class
 
-Task: use **word embedding** and **RNN** to identify whether the message in DCARD is malicious
+Task : use **word embedding** and **RNN** to identify whether the message in DCARD is malicious
 
-Dataset: 120K message in DCARD
+Dataset : 120K message in DCARD
 
-train_model.py :  use word embedding and RNN
+train_model.py : use word embedding and RNN
 
 test_model.py : ensemble four models
 
