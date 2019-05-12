@@ -1,4 +1,4 @@
-# This is hw2 of Machine Learning - Winner or Loser
+# HW2 of Machine Learning - Winner or Loser
 
 * It is a two class problem
 * Ranked 38 place in class
