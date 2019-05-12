@@ -1,4 +1,4 @@
-# This is hw6  of Machine Learning - Malicious Comments Identification
+# HW6 of Machine Learning - Malicious Comments Identification
 * Ranked 20 place in class
 
 Task: use **word embedding** and **RNN** to identify whether the message in DCARD is malicious
