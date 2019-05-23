@@ -27,5 +27,10 @@
 7. HW7 - Unsupervised Learning
     - [HW7 introduction](https://ntumlta2019.github.io/ml-web-hw7/)
     - [Kaggle](https://www.kaggle.com/c/ml2019spring-hw7/)
-
+    
+8. HW8 - Model Compression for Image Sentiment Classification
+    - [HW8 introduction](https://ntumlta2019.github.io/ml-web-hw8/)
+    - [Kaggle](https://www.kaggle.com/c/ml2019spring-hw8/)  
+ 
+ 
 For more details, please check this [Link](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML19.html)
