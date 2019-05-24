@@ -13,7 +13,9 @@ pca.py : personally program PCA code and draw eigenface, reconstruct images
 
 compare_images.py : compare_images before and after autoencoder
 <br><br>
-    
+
+**NOTE: different random seed of PCA might affect result significantly !!!**
+
 Usage of Scripts:
 
 (1) Run pca.sh:
