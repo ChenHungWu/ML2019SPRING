@@ -67,9 +67,10 @@ for i in range(1,len(record.columns)):
 testFile = pd.read_csv(test_data_address)
 index1, index2 = testFile['image1_name'], testFile['image2_name']
 
-ensemble = pd.DataFrame()
-for i in record.columns:
-    ensemble += record[i]
+ensemble = record[record.columns[0]]
+for i in range(1,len(record.columns)):
+    compare_name = record.columns[i]
+    ensemble += record[compare_name]
 
 for i in range(pic_num):
     if ensemble[i]>=2:

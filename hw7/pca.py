@@ -58,7 +58,7 @@ def eigen_face(images_array):
 
     # plot eigenfacce
     for i in range(5):
-        eigenface = process(np.copy(eigen[:,i])).reshape(600,600,3)
+        eigenface = process(-eigen[:,i]).reshape(600,600,3)
         io.imsave(str(i) + '_eigenface.jpg', eigenface, quality=100)
 
     ############ For prob 1.d ############
