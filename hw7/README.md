@@ -1,15 +1,15 @@
 # HW7 of Machine Learning - Unsupervised Learning
 * Ranked 4 place in class
 
-Task : use **autoencoder** and **PCA** to reduce dimension of figure, then use **Kmeans** to separate two groups of figures without label
+Task : use **autoencoder** and **PCA** to reduce dimension of images, then use **Kmeans** to separate two groups of images without label
 
 Dataset : 40K 32*32*3 images come from CelebA & cifar10
 
 train_model.py : train autoencoder model
 
-cluster.py : use **PCA** to reduce dimension of figure, then use **Kmeans** to separate two groups 
+cluster.py : use **PCA** to reduce dimension of figure, then use **Kmeans** to separate two groups of images
 
-pca.py : personally program PCA code and draw eigenface, reconstruct figure
+pca.py : personally program PCA code and draw eigenface, reconstruct images
 
 compare_images.py : compare_images before and after autoencoder
 <br><br>
