@@ -3,7 +3,7 @@
 
 Task : use **autoencoder** and **PCA** to reduce dimension of images, then use **Kmeans** to separate two groups of images without label
 
-Dataset : 40K 32*32*3 images come from CelebA & cifar10
+Dataset : 40K 32 * 32 * 3 images come from CelebA & cifar10
 
 train_model.py : train autoencoder model
 
