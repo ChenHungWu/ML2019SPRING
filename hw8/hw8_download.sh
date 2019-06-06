@@ -1,0 +1,1 @@
+wget https://github.com/WuChenHung/ML2019SPRING/releases/download/hw8/compress_model5.model
