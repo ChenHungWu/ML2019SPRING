@@ -1,7 +1,6 @@
 # HW8 of Machine Learning - Model Compression for Image Sentiment Classification
 
 * It is a multi-class problem
-* Ranked 2 place in class
 
 Task: Use **MobileNet** to classify images to one of seven sentiment
 
