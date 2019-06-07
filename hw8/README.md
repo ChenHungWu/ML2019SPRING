@@ -12,6 +12,7 @@ train_model.py : use 62955 params
 compress_model.py : compress the model
 
 test_model.py : get prediction
+</br></br>
 
 Usage of Scripts:
 
