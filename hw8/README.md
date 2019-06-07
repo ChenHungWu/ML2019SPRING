@@ -6,12 +6,12 @@
 Task: Use **MobileNet** to classify images to one of seven sentiment
 
 Dataset: 28709 processed gray scale images with size 48*48
-<br /><br />
 
-train_model.py :use 62955 params
+train_model.py : use 62955 params
 
-<br /><br />
-    
+compress_model.py : compress the model
+
+test_model.py : get prediction
 
 Usage of Scripts:
 
